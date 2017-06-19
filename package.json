@@ -1,0 +1,28 @@
+{
+  "name": "corner-alerts",
+  "version": "1.0.0",
+  "description": "Helps you to put alerts in the page corners",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabrielscarvalho/corner-alerts.git"
+  },
+  "keywords": [
+    "alert",
+    "corner",
+    "toast",
+    "modal-like"
+  ],
+  "author": "gabrielscarvalho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielscarvalho/corner-alerts/issues"
+  },
+  "homepage": "https://github.com/gabrielscarvalho/corner-alerts",
+  "devDependencies": {
+    "jquery": "^3.2.1"
+  }
+}
