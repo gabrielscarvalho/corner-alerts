@@ -1,5 +1,5 @@
 {
-  "name": "simple-corner-alerts",
+  "name": "corner-alerts",
   "version": "1.0.0",
   "description": "Helps you to put alerts in the page corners",
   "main": "index.js",
