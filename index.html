@@ -3,33 +3,42 @@
 <head>
 	<title>Corner Alerts</title>
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="node_modules/jquery-ui/build/release.js"></script>
 	<script src="lib/js/corner-alerts.js"></script>
 	<link rel="stylesheet" href="lib/css/style.css"/>
 
 	<script>
 		$(document).ready(function(){
 
-			var _cornerAlerts = $('body').cornerAlerts({});
-			console.log(_cornerAlerts);
+			var _cornerAlerts = $('body').cornerAlertsInit({});
 
-
-
-
+/*
 			_cornerAlerts.show('bottom-right', $('#test1'));
 			_cornerAlerts.show('bottom-right', $('#test2'));
 
+
+
 			_cornerAlerts.hide('bottom-right', $('#test1'));
-			//_cornerAlerts.hide('bottom-right', $('#test2'));
+			_cornerAlerts.hide('bottom-right', $('#test2'));
+
+			_cornerAlerts.show('bottom-right', $('#test1'));
+			_cornerAlerts.show('bottom-right', $('#test2'));*/
+
+
+			$('#test1').cornerAlert('bottom-right', 'show');
+			$('#test2').cornerAlert('bottom-right', 'show');
+
+
+			$('#test1').cornerAlert('bottom-right', 'hide');
+			$('#test2').cornerAlert('bottom-right', 'hide');
+
+			$('#test1').cornerAlert('bottom-left', 'show');
+			$('#test2').cornerAlert('bottom-right', 'show');
 
 
 
-			//_cornerAlerts.show('bottom-right', $('#test1'));
-			_cornerAlerts.show('bottom-right', $('#test2'));
 
 
-
-			_cornerAlerts.show('bottom-left', $('#test3'));
+	/*		_cornerAlerts.show('bottom-left', $('#test3'));
 			_cornerAlerts.show('bottom-left', $('#test4'));
 
 
@@ -39,7 +48,7 @@
 
 			_cornerAlerts.show('top-right', $('#test7'));
 			_cornerAlerts.show('top-right', $('#test8'));
-
+*/
 			var i = 1;
 		});
 	</script>
