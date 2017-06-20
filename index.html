@@ -3,6 +3,7 @@
 <head>
 	<title>Corner Alerts</title>
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/jquery-ui/build/release.js"></script>
 	<script src="lib/js/corner-alerts.js"></script>
 	<link rel="stylesheet" href="lib/css/style.css"/>
 
@@ -12,6 +13,34 @@
 			var _cornerAlerts = $('body').cornerAlerts({});
 			console.log(_cornerAlerts);
 
+
+
+
+			_cornerAlerts.show('bottom-right', $('#test1'));
+			_cornerAlerts.show('bottom-right', $('#test2'));
+
+			_cornerAlerts.hide('bottom-right', $('#test1'));
+			//_cornerAlerts.hide('bottom-right', $('#test2'));
+
+
+
+			//_cornerAlerts.show('bottom-right', $('#test1'));
+			_cornerAlerts.show('bottom-right', $('#test2'));
+
+
+
+			_cornerAlerts.show('bottom-left', $('#test3'));
+			_cornerAlerts.show('bottom-left', $('#test4'));
+
+
+
+			_cornerAlerts.show('top-left', $('#test5'));
+			_cornerAlerts.show('top-left', $('#test6'));
+
+			_cornerAlerts.show('top-right', $('#test7'));
+			_cornerAlerts.show('top-right', $('#test8'));
+
+			var i = 1;
 		});
 	</script>
 
@@ -20,6 +49,20 @@
 	<div style="width:100%; height: 2000px; background:#F3F3F3;">
 		<h1>Alertas</h1>
 
+		<div id="test1" style=" background: green; padding:20px;">Um alerta 1</div>
+		<div id="test2" style=" background: green; padding:20px;">Um alerta 2</div>
+
+
+		<div id="test3" style="display:none; background: green; padding:20px;">Um alerta 3</div>
+		<div id="test4" style="display:none; background: green; padding:20px;">Um alerta 4</div>
+
+
+		<div id="test5" style="display:none; background: green; padding:20px;">Um alerta 5</div>
+		<div id="test6" style="display:none; background: green; padding:20px;">Um alerta 6</div>
+
+
+		<div id="test7" style="display:none; background: green; padding:20px;">Um alerta 7</div>
+		<div id="test8" style="display:none; background: green; padding:20px;">Um alerta 8</div>
 	</div>
 </body>
 
