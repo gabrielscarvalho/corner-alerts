@@ -1,8 +1,9 @@
 
 .corner-alerts-container {
     position: fixed;
-    border:2px solid #000;
-    padding:20px;
+    border:0px;
+    padding:0px;
     background: unset;
+    z-index:9999;
     margin: 0px;
 }

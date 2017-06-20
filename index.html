@@ -5,73 +5,112 @@
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="lib/js/corner-alerts.js"></script>
 	<link rel="stylesheet" href="lib/css/style.css"/>
+	<style>
+		.alert {
+			width:300px;
+			background: #F5F5F5;
+			border:1px solid #CCC;
+			padding:20px;
+			display: none;
+		}
+		.close {
+			width:30px;
+			height:30px;
+			background:#F8F8F8;
+			border:1px solid #EEE;
+			float: right;
+		}
 
+		.center {
+			margin: auto;
+			width: 50%;
+			border: 3px solid #eee;
+			background: #F7F7F6;
+			padding: 10px;
+		}
+
+	</style>
 	<script>
 		$(document).ready(function(){
 
 			var _cornerAlerts = $('body').cornerAlertsInit({});
 
-/*
-			_cornerAlerts.show('bottom-right', $('#test1'));
-			_cornerAlerts.show('bottom-right', $('#test2'));
-
-
-
-			_cornerAlerts.hide('bottom-right', $('#test1'));
-			_cornerAlerts.hide('bottom-right', $('#test2'));
-
-			_cornerAlerts.show('bottom-right', $('#test1'));
-			_cornerAlerts.show('bottom-right', $('#test2'));*/
-
 
 			$('#test1').cornerAlert('bottom-right', 'show');
 			$('#test2').cornerAlert('bottom-right', 'show');
 
-
-			$('#test1').cornerAlert('bottom-right', 'hide');
-			$('#test2').cornerAlert('bottom-right', 'hide');
-
-			$('#test1').cornerAlert('bottom-left', 'show');
-			$('#test2').cornerAlert('bottom-right', 'show');
+			var id = setInterval(function(){
+				$('#test1').cornerAlert('bottom-right', 'hide');
+				clearInterval(id);
+			}, 3000);
 
 
+			$('#test3').cornerAlert('bottom-left','show'); 
+			$('#test4').cornerAlert('bottom-left','show'); 
+			
+			$('#test5').cornerAlert('top-left','show'); 
+			$('#test6').cornerAlert('top-left','show'); 
+			
+			$('#test7').cornerAlert('top-right','show'); 
+			$('#test8').cornerAlert('top-right','show'); 
 
-
-
-	/*		_cornerAlerts.show('bottom-left', $('#test3'));
-			_cornerAlerts.show('bottom-left', $('#test4'));
-
-
-
-			_cornerAlerts.show('top-left', $('#test5'));
-			_cornerAlerts.show('top-left', $('#test6'));
-
-			_cornerAlerts.show('top-right', $('#test7'));
-			_cornerAlerts.show('top-right', $('#test8'));
-*/
 			var i = 1;
 		});
 	</script>
 
 </head>
 <body>
-	<div style="width:100%; height: 2000px; background:#F3F3F3;">
-		<h1>Alertas</h1>
+	<div style="width:100%; height: 2000px; background:#4c5e71;">
+		
+		<div style="width: 700px" class="center">
+			<h1>Explanations</h1>
+			<hr/>
 
-		<div id="test1" style=" background: green; padding:20px;">Um alerta 1</div>
-		<div id="test2" style=" background: green; padding:20px;">Um alerta 2</div>
+			<b>Mode of use</b><br/>
+			First, init the class.
+
+			<div >
+				$(document).ready(function(){ <br/>
+					$('body').cornerAlertsInit({});<br/>
+				});<br/>
+			</div>
 
 
-		<div id="test3" style="display:none; background: green; padding:20px;">Um alerta 3</div>
-		<div id="test4" style="display:none; background: green; padding:20px;">Um alerta 4</div>
+		</div>
 
 
-		<div id="test5" style="display:none; background: green; padding:20px;">Um alerta 5</div>
-		<div id="test6" style="display:none; background: green; padding:20px;">Um alerta 6</div>
+
+		<div id="test1" class="alert" >
+			Um alerta 1
+			<button class="close" onclick="$('#test1').cornerAlert('bottom-right', 'hide');">X</button>
+		</div>
+		<div id="test2" class="alert" >Um alerta 2
+			<button class="close" onclick="$('#test2').cornerAlert('bottom-right', 'hide');">X</button>
+		</div>
 
 
-		<div id="test7" style="display:none; background: green; padding:20px;">Um alerta 7</div>
-		<div id="test8" style="display:none; background: green; padding:20px;">Um alerta 8</div>
+		<div id="test3" class="alert" >Um alerta 3
+			<button class="close" onclick="$('#test3').cornerAlert('bottom-left', 'hide');">X</button>
+		</div>
+		<div id="test4" class="alert" >Um alerta 4
+			<button class="close" onclick="$('#test4').cornerAlert('bottom-left', 'hide');">X</button>
+		</div>
+
+
+		<div id="test5" class="alert" >Um alerta 5
+			<button class="close" onclick="$('#test5').cornerAlert('top-left', 'hide');">X</button>
+		</div>
+		<div id="test6" class="alert" >Um alerta 6
+			<button class="close" onclick="$('#test6').cornerAlert('top-left', 'hide');">X</button>
+		</div>
+
+
+		<div id="test7" class="alert" >Um alerta 7
+			<button class="close" onclick="$('#test7').cornerAlert('top-right', 'hide');">X</button>
+		</div>
+		<div id="test8" class="alert" >Um alerta 8
+			<button class="close" onclick="$('#test8').cornerAlert('top-right', 'hide');">X</button>
+		</div>
 	</div>
 </body>
 
