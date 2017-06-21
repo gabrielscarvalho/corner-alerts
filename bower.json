@@ -1,0 +1,29 @@
+{
+  "name": "corner-alerts",
+  "description": "Helps you to put alerts in the page corners",
+  "main": [
+    "lib/js/corner-alerts.js",
+    "lib/css/style.css" 
+  ],
+  "authors": [
+    "gabrielscarvalho"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "alert",
+    "corner",
+    "toast",
+    "modal-like"
+  ],
+  "homepage": "https://github.com/gabrielscarvalho/corner-alerts",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=2.1.1"
+  }
+}
